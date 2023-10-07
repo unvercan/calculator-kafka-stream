@@ -1,6 +1,6 @@
-# Core
+# Server
 server:
-  port: 3500
+  port: 3535
 
 spring:
   # SQL Database (H2)
@@ -32,16 +32,9 @@ spring:
     bootstrap-servers: localhost:9092
     group-id: calculator-group
     topic:
-      operand: operand
-      operation: operation
+      calculation: calculation
       result: result
-
-  # NoSQL Database (MongoDB)
-  # data:
-  # mongodb:
-  # host: localhost
-  # port: 27017
-  # database: result-db
+      valid-calculation: valid-calculation
 
   # Database Initializing
   sql:
@@ -50,6 +43,13 @@ spring:
       platform: h2
       schema-locations: classpath:sql/schema.sql
       data-locations: classpath:sql/data.sql
+
+# Logging
+logging:
+  level:
+    root: info
+    tr.unvercanunlu.calculator_kafka_stream.kafka: debug
+    tr.unvercanunlu.calculator_kafka_stream.controller: trace
 
 # API Documentation (OpenAPI)
 springdoc:
