@@ -21,7 +21,7 @@ spring:
         format_sql: true
         globally_quoted_identifiers: true
 
-  # H2 Database
+  # H2
   h2:
     console:
       enabled: true

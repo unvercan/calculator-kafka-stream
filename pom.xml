@@ -29,6 +29,7 @@
         <maven.compiler.source>17</maven.compiler.source>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <openapi.version>2.1.0</openapi.version>
     </properties>
 
     <dependencies>
@@ -38,7 +39,7 @@
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
-        <!-- JPA and Hibernate -->
+        <!-- JPA -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -60,7 +61,7 @@
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-            <version>2.1.0</version>
+            <version>${openapi.version}</version>
         </dependency>
 
         <!-- SQL Database (H2) -->
@@ -70,7 +71,7 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Lombok -->
+        <!-- Reduce Boilerplate (Lombok) -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -83,7 +84,7 @@
             <artifactId>spring-kafka</artifactId>
         </dependency>
 
-        <!-- Kafka Stream -->
+        <!-- Stream Processor (Kafka Stream) -->
         <dependency>
             <groupId>org.apache.kafka</groupId>
             <artifactId>kafka-streams</artifactId>
